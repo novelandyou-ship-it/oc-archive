@@ -12,7 +12,6 @@
       --pink: #ff69b4;
       --pale: #ffc6e5;
       --black: #160711;
-      --wine: #4b002b;
       --white: #fff8fc;
       --gold: #ffe7a3;
     }
@@ -51,16 +50,13 @@
     }
 
     .page-frame {
-      position: relative;
       width: min(100% - 20px, 1000px);
       margin: 18px auto;
       padding: 5px;
       border: 3px solid var(--hot);
       outline: 2px dashed var(--pale);
       outline-offset: 3px;
-      box-shadow:
-        0 0 15px #ff149977,
-        0 0 35px #ff149933;
+      box-shadow: 0 0 15px #ff149977, 0 0 35px #ff149933;
       background: #160711f5;
     }
 
@@ -77,7 +73,6 @@
     }
 
     header {
-      position: relative;
       overflow: hidden;
       padding: 24px 12px 20px;
       text-align: center;
@@ -94,7 +89,7 @@
       color: white;
       font-size: 13px;
       font-weight: 900;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-shadow: 1px 1px #8c0046;
     }
 
@@ -104,10 +99,7 @@
       font-size: clamp(25px, 6vw, 42px);
       font-weight: 1000;
       letter-spacing: 2px;
-      text-shadow:
-        2px 2px 0 #a00055,
-        4px 4px 0 #4a0028,
-        0 0 12px white;
+      text-shadow: 2px 2px 0 #a00055, 4px 4px 0 #4a0028, 0 0 12px white;
     }
 
     .site-subtitle {
@@ -116,7 +108,6 @@
       font-size: 10px;
       font-weight: 900;
       letter-spacing: 3px;
-      text-shadow: 1px 1px #8c0046;
     }
 
     .hibiscus {
@@ -124,7 +115,7 @@
       margin: 0 4px;
       font-size: 23px;
       vertical-align: middle;
-      filter: drop-shadow(0 0 5px #fff);
+      filter: drop-shadow(0 0 5px white);
     }
 
     nav {
@@ -155,11 +146,9 @@
     }
 
     .hero {
-      position: relative;
       padding: 30px 12px 27px;
       text-align: center;
-      background:
-        radial-gradient(ellipse at center, #ff149932, transparent 70%);
+      background: radial-gradient(ellipse at center, #ff149932, transparent 70%);
     }
 
     .hero-deco {
@@ -175,9 +164,7 @@
       color: #ff9ed2;
       font-size: clamp(21px, 4.7vw, 34px);
       font-weight: 1000;
-      text-shadow:
-        2px 2px 0 #8c0046,
-        0 0 10px #ff149988;
+      text-shadow: 2px 2px 0 #8c0046, 0 0 10px #ff149988;
     }
 
     .love-badge {
@@ -201,7 +188,7 @@
       text-shadow: 1px 1px #a00055;
     }
 
-    /* ♡ うちよそバナー：右から左へ ♡ */
+    /* うちよそバナー：右から左 */
     .marquee {
       overflow: hidden;
       white-space: nowrap;
@@ -222,12 +209,8 @@
     }
 
     @keyframes gyaru-scroll {
-      from {
-        transform: translateX(100vw);
-      }
-      to {
-        transform: translateX(-100%);
-      }
+      from { transform: translateX(100vw); }
+      to { transform: translateX(-100%); }
     }
 
     .section-heading {
@@ -242,9 +225,7 @@
       color: white;
       font-size: clamp(21px, 4vw, 29px);
       font-weight: 1000;
-      text-shadow:
-        2px 2px 0 #a00055,
-        0 0 8px #ff149977;
+      text-shadow: 2px 2px 0 #a00055, 0 0 8px #ff149977;
     }
 
     .section-heading p {
@@ -269,17 +250,13 @@
       border: 3px solid var(--pink);
       outline: 1px dashed white;
       outline-offset: -6px;
-      box-shadow:
-        4px 4px 0 #850047,
-        0 0 12px #ff149922;
+      box-shadow: 4px 4px 0 #850047, 0 0 12px #ff149922;
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .character-card:hover {
       transform: translateY(-5px) rotate(-1deg);
-      box-shadow:
-        6px 7px 0 #ff149966,
-        0 0 18px #ff149955;
+      box-shadow: 6px 7px 0 #ff149966, 0 0 18px #ff149955;
     }
 
     .character-card a {
@@ -444,10 +421,6 @@
       .marquee span {
         animation: none;
       }
-
-      * {
-        scroll-behavior: auto;
-      }
     }
   </style>
 </head>
@@ -520,37 +493,61 @@
         id: "001",
         name: "CHARACTER 001",
         description: "♡ ｺｺに紹介文 ♡",
-        image:"images/tokonatu.jpg"
+        image: "images/character-001.jpg"
       },
       {
         id: "002",
         name: "CHARACTER 002",
         description: "♡ ｺｺに紹介文 ♡",
-        image: ""
+        image: "images/character-002.jpg"
       },
       {
         id: "003",
         name: "CHARACTER 003",
         description: "♡ ｺｺに紹介文 ♡",
-        image: ""
+        image: "images/character-003.jpg"
       },
       {
         id: "004",
         name: "CHARACTER 004",
         description: "♡ ｺｺに紹介文 ♡",
-        image: ""
+        image: "images/character-004.jpg"
       },
       {
         id: "005",
         name: "CHARACTER 005",
         description: "♡ ｺｺに紹介文 ♡",
-        image: ""
+        image: "images/character-005.jpg"
       },
       {
         id: "006",
         name: "CHARACTER 006",
         description: "♡ ｺｺに紹介文 ♡",
-        image: ""
+        image: "images/character-006.jpg"
+      },
+      {
+        id: "007",
+        name: "CHARACTER 007",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: "images/character-007.jpg"
+      },
+      {
+        id: "008",
+        name: "CHARACTER 008",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: "images/character-008.jpg"
+      },
+      {
+        id: "009",
+        name: "CHARACTER 009",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: "images/character-009.jpg"
+      },
+      {
+        id: "010",
+        name: "CHARACTER 010",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: "images/character-010.jpg"
       }
     ];
 
@@ -577,21 +574,17 @@
       const imageBox = document.createElement("div");
       imageBox.className = "character-image";
 
-      if (character.image) {
-        const img = document.createElement("img");
-        img.src = character.image;
-        img.alt = character.name;
-        img.loading = "lazy";
+      const img = document.createElement("img");
+      img.src = character.image;
+      img.alt = character.name;
+      img.loading = "lazy";
 
-        img.onerror = () => {
-          imageBox.replaceChildren();
-          imageBox.textContent = "♡";
-        };
-
-        imageBox.appendChild(img);
-      } else {
+      img.onerror = () => {
+        img.remove();
         imageBox.textContent = "♡";
-      }
+      };
+
+      imageBox.appendChild(img);
 
       const info = document.createElement("div");
       info.className = "character-info";
