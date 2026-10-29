@@ -2,419 +2,481 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>☆★ ﾏｨOC図鑑 ★☆</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☆★ ﾏｨOC図鑑 ★☆</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap');
+  <style>
+    :root {
+      --hot: #ff1493;
+      --pink: #ff69b4;
+      --light-pink: #ffc0df;
+      --black: #160711;
+      --white: #fff8fc;
+    }
 
-:root {
-  --pink: #ff39a8;
-  --hot: #ff008c;
-  --light: #ffbce2;
-  --black: #160914;
-  --white: #fff1fa;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-* { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  color: var(--white);
-  background-color: var(--black);
-  background-image:
-    radial-gradient(ellipse at 10% 10%, #641342 0%, transparent 36%),
-    radial-gradient(ellipse at 90% 65%, #42113b 0%, transparent 38%);
-  font-family: 'Zen Maru Gothic', sans-serif;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      color: var(--white);
+      background-color: var(--black);
+      background-image:
+        radial-gradient(ellipse at 20% 20%, #ff149922 0 2px, transparent 3px),
+        radial-gradient(ellipse at 80% 60%, #ff69b422 0 2px, transparent 3px),
+        repeating-linear-gradient(
+          135deg,
+          #ff14990b 0px,
+          #ff14990b 4px,
+          transparent 4px,
+          transparent 12px
+        );
+      background-size: 28px 28px, 34px 34px, auto;
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      line-height: 1.8;
+    }
 
-a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-header {
-  padding: 17px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  background: #0e060d;
-  border-bottom: 3px solid var(--pink);
-  box-shadow: 0 3px 18px #ff008c66;
-}
+    .page-frame {
+      width: min(100% - 24px, 1000px);
+      margin: 20px auto;
+      border: 3px solid var(--hot);
+      box-shadow: 0 0 18px #ff149955;
+      background: #160711ee;
+    }
 
-.logo {
-  color: white;
-  font-size: 17px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px var(--hot), 0 0 12px var(--pink);
-}
+    header {
+      padding: 24px 14px 18px;
+      text-align: center;
+      background: linear-gradient(135deg, #ff1493, #ff69b4, #ff1493);
+      border-bottom: 4px double white;
+    }
 
-nav {
-  display: flex;
-  gap: 12px;
-  font-size: 11px;
-  font-weight: 900;
-}
+    .site-title {
+      margin: 0;
+      color: white;
+      font-size: clamp(24px, 5vw, 38px);
+      font-weight: 1000;
+      text-shadow:
+        2px 2px 0 #a00055,
+        4px 4px 0 #4a0028;
+      letter-spacing: 2px;
+    }
 
-nav a:hover { color: var(--light); }
+    .site-subtitle {
+      margin: 5px 0 0;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
 
-.hero {
-  padding: 45px 5% 35px;
-  text-align: center;
-  background:
-    radial-gradient(ellipse at center, #64204d 0%, #291026 55%, transparent 80%);
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px;
+      background: #260817;
+      border-bottom: 2px dashed var(--pink);
+    }
 
-.tiny {
-  color: var(--light);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
+    nav a {
+      display: inline-block;
+      padding: 5px 18px;
+      color: white;
+      background: var(--hot);
+      border: 2px solid white;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 900;
+      box-shadow: 3px 3px 0 #7a003e;
+      transition: transform 0.2s;
+    }
 
-h1 {
-  margin: 18px 0 12px;
-  color: white;
-  font-size: clamp(30px, 7vw, 65px);
-  line-height: 1.25;
-  font-weight: 900;
-  text-shadow: 3px 3px 0 var(--hot), 0 0 18px #ff39a8aa;
-}
+    nav a:hover {
+      transform: translateY(-3px) rotate(-2deg);
+    }
 
-.subtitle {
-  color: var(--light);
-  font-size: 12px;
-  line-height: 2;
-}
+    .hero {
+      padding: 32px 16px 24px;
+      text-align: center;
+      background: radial-gradient(circle at center, #ff149928, transparent 70%);
+    }
 
-.badge {
-  display: inline-block;
-  margin-top: 17px;
-  padding: 9px 17px;
-  color: white;
-  background: linear-gradient(135deg, #ff7aca, #ff008c);
-  border: 2px solid white;
-  border-radius: 24px;
-  box-shadow: 0 0 0 3px var(--pink), 0 4px 12px #ff008c66;
-  font-size: 11px;
-  font-weight: 900;
-  transform: rotate(-2deg);
-}
+    .hero h2 {
+      margin: 0 0 12px;
+      color: #ff9ed2;
+      font-size: clamp(21px, 4.5vw, 32px);
+      font-weight: 1000;
+      text-shadow: 2px 2px 0 #8c0046;
+    }
 
-.marquee {
-  padding: 11px 5%;
-  color: white;
-  background: var(--hot);
-  border-top: 2px dashed white;
-  border-bottom: 2px dashed white;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 900;
-  line-height: 1.9;
-}
+    .love-badge {
+      display: inline-block;
+      padding: 4px 15px;
+      color: white;
+      background: var(--hot);
+      border: 2px solid white;
+      outline: 2px dashed var(--pink);
+      outline-offset: 3px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
 
-main {
-  width: min(1100px, 92%);
-  margin: auto;
-  padding: 32px 0 55px;
-}
+    /* ♡ 平成ギャル風・うちよそバナー ♡ */
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 11px 0;
+      color: white;
+      background: var(--hot);
+      border-top: 2px dashed white;
+      border-bottom: 2px dashed white;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.9;
+      text-shadow: 1px 1px 0 #a00055;
+    }
 
-.section-title {
-  margin: 0 0 10px;
-  color: white;
-  font-size: clamp(22px, 4vw, 30px);
-  text-shadow: 2px 2px 0 var(--hot);
-}
+    .marquee span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: gyaru-scroll 16s linear infinite;
+    }
 
-.description {
-  color: #f1b8d8;
-  font-size: 12px;
-  line-height: 2;
-}
+    @keyframes gyaru-scroll {
+      from {
+        transform: translateX(-100%);
+      }
 
-.decor {
-  margin: 20px 0 26px;
-  padding: 13px;
-  color: var(--light);
-  background: #281323;
-  border: 1px dashed var(--pink);
-  border-radius: 10px;
-  text-align: center;
-  font-size: 11px;
-  line-height: 2;
-}
+      to {
+        transform: translateX(100vw);
+      }
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
+    .section-title {
+      margin: 0;
+      padding: 18px 10px;
+      color: white;
+      text-align: center;
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 1000;
+      text-shadow: 2px 2px 0 #a00055;
+      background: repeating-linear-gradient(
+        45deg,
+        #ff1493 0px,
+        #ff1493 10px,
+        #d90079 10px,
+        #d90079 20px
+      );
+      border-top: 3px solid white;
+      border-bottom: 3px solid white;
+    }
 
-.card {
-  position: relative;
-  min-width: 0;
-  padding: 7px;
-  background:
-    repeating-linear-gradient(
-      135deg,
-      #ff7dc9 0px,
-      #ff7dc9 5px,
-      #ff279f 5px,
-      #ff279f 10px
-    );
-  border: 2px solid #ffc9e9;
-  border-radius: 14px;
-  box-shadow: 0 5px 0 #8d1558, 0 0 16px #ff39a844;
-  transition: transform .2s, box-shadow .2s;
-}
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      padding: 22px;
+    }
 
-.card:hover {
-  transform: translateY(-5px) rotate(-1deg);
-  box-shadow: 0 8px 0 #8d1558, 0 0 24px #ff39a899;
-}
+    .character-card {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--white);
+      background: #260817;
+      border: 3px solid var(--pink);
+      box-shadow: 4px 4px 0 #850047;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.card::before {
-  content: "☆ﾐ ♡ ﾐ☆";
-  position: absolute;
-  top: -11px;
-  right: 8px;
-  z-index: 2;
-  padding: 4px 8px;
-  color: white;
-  background: var(--hot);
-  border: 1px solid white;
-  border-radius: 20px;
-  font-size: 10px;
-}
+    .character-card:hover {
+      transform: translateY(-5px) rotate(-1deg);
+      box-shadow: 6px 7px 0 #ff149966;
+    }
 
-.art {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  overflow: hidden;
-  color: white;
-  background: radial-gradient(ellipse at center, #5b2046, #1a0b18 75%);
-  border: 2px solid white;
-}
+    .character-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      color: white;
+      background: repeating-linear-gradient(
+        135deg,
+        #ff149922 0px,
+        #ff149922 8px,
+        #160711 8px,
+        #160711 16px
+      );
+      border-bottom: 3px dashed var(--pink);
+      font-size: 38px;
+    }
 
-.art::before {
-  content: "✧･ﾟ: *✧･ﾟ:*";
-  color: var(--pink);
-  font-size: 15px;
-  text-shadow: 0 0 10px var(--pink);
-}
+    .character-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.art::after {
-  content: "🌺 ♡";
-  position: absolute;
-  right: 8px;
-  bottom: 7px;
-  z-index: 2;
-  font-size: 21px;
-  text-shadow: 0 0 10px var(--pink);
-}
+    .character-info {
+      padding: 10px;
+      text-align: center;
+    }
 
-.art img {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .character-number {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 1px 9px;
+      color: white;
+      background: var(--hot);
+      border: 1px solid white;
+      font-size: 9px;
+      font-weight: 900;
+    }
 
-.art-number {
-  color: var(--light);
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 900;
-  text-shadow: 1px 1px 5px black;
-}
+    .character-name {
+      margin: 0;
+      color: #ff9ed2;
+      font-size: clamp(14px, 2.5vw, 20px);
+      font-weight: 1000;
+      overflow-wrap: anywhere;
+    }
 
-.art-word {
-  font-size: 22px;
-  font-weight: 900;
-  text-shadow: 2px 2px 0 var(--hot), 0 0 12px var(--pink);
-}
+    .character-description {
+      margin: 5px 0 10px;
+      color: #f8c9e3;
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
 
-.info {
-  padding: 13px 10px;
-  color: #290c20;
-  background: linear-gradient(180deg, #fff0f8, #ffc9e7);
-  border: 2px solid white;
-  border-top: 0;
-  border-radius: 0 0 8px 8px;
-  overflow-wrap: anywhere;
-}
+    .profile-link {
+      display: block;
+      padding: 6px 4px;
+      color: white;
+      background: var(--hot);
+      border: 1px solid white;
+      font-size: 11px;
+      font-weight: 900;
+    }
 
-.file {
-  color: #a21c68;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
+    .profile-link:hover {
+      color: var(--hot);
+      background: white;
+    }
 
-.name {
-  margin: 8px 0;
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 1.5;
-}
+    .bottom-deco {
+      padding: 18px 10px;
+      color: #ff9ed2;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      border-top: 2px dashed var(--pink);
+    }
 
-.tag {
-  display: inline-block;
-  max-width: 100%;
-  padding: 4px 8px;
-  color: white;
-  background: #e92b94;
-  border: 1px solid white;
-  border-radius: 20px;
-  font-size: 10px;
-  overflow-wrap: anywhere;
-}
+    footer {
+      padding: 15px 10px;
+      color: white;
+      text-align: center;
+      background: var(--hot);
+      border-top: 3px double white;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
 
-.view {
-  margin-top: 13px;
-  padding-top: 10px;
-  color: #a21c68;
-  border-top: 1px dashed #e477b7;
-  font-size: 10px;
-  font-weight: 900;
-  line-height: 1.8;
-}
+    @media (max-width: 650px) {
+      .character-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 14px;
+      }
 
-footer {
-  padding: 24px 5%;
-  color: var(--light);
-  background: #0e060d;
-  border-top: 3px solid var(--pink);
-  text-align: center;
-  font-size: 10px;
-  line-height: 2.2;
-}
+      .page-frame {
+        width: calc(100% - 14px);
+        margin: 10px auto;
+      }
 
-@media(max-width: 650px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
-  .hero { padding: 38px 5% 32px; }
-  .name { font-size: 16px; }
-}
+      .hero {
+        padding: 26px 10px 22px;
+      }
+    }
 
-@media(max-width: 360px) {
-  .grid { gap: 9px; }
-  .info { padding: 10px 7px; }
-  .art-word { font-size: 19px; }
-  nav { gap: 8px; }
-}
-</style>
+    @media (max-width: 360px) {
+      .character-grid {
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .character-info {
+        padding: 7px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee span {
+        animation: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<header>
-  <a class="logo" href="index.html">☆★ ﾏｨOC図鑑 ★☆</a>
-  <nav>
-    <a href="index.html">TOP ♡</a>
-    <a href="characters.html">きゃら一覧 ☆</a>
-  </nav>
-</header>
+  <div class="page-frame">
 
-<section class="hero">
-  <div class="tiny">☆.｡.:*･ﾟ WELCOME ･ﾟ*:.｡.☆</div>
-  <h1>ょぅこそｯ!!<br>ｩﾁのOC図鑑へ♡</h1>
-  <p class="subtitle">
-    💖 ｶﾜｨｨぁの子もｶｯｺｨｨぁの子も大集合ｯ!! 💖<br>
-    推Ｕを見つけてぃってねｯ☆ (ﾉ´ヮ`)ﾉ*: ･ﾟ
-  </p>
-  <div class="badge">♡ LOVE MY BABIES ♡</div>
-</section>
+    <header>
+      <h1 class="site-title">☆★ ﾏｨOC図鑑 ★☆</h1>
+      <p class="site-subtitle">♡ MY ORIGINAL CHARACTERS ♡</p>
+    </header>
 
-<div class="marquee">
-  🌺 ﾟ･:*:･｡☆ ぉ気に入りの子を探Ｕてねｯ!! ☆｡･:*:･ﾟ 🌺
-</div>
+    <nav>
+      <a href="index.html">♡ TOP ♡</a>
+      <a href="characters.html">♡ きゃら一覧 ♡</a>
+    </nav>
 
-<main>
-  <h2 class="section-title">♡ きゃらくたぁ一覧ｯ!! ♡</h2>
-  <p class="description">
-    ぃらｯしゃぃませｯ☆ (≧▽≦)ﾉ<br>
-    ｺｺゎｩﾁの大切なOCたちのぉ部屋だょ♡<br>
-    気になる子をｸﾘｯｸしてねｯ!! ☆ﾐ
-  </p>
+    <section class="hero">
+      <h2>ょぅこそｯ!! ｩﾁのOC図鑑へ♡</h2>
+      <span class="love-badge">♡ LOVE MY BABIES ♡</span>
+    </section>
 
-  <div class="decor">
-    🌺 ｡･:*:･ﾟ★,｡･:*:･ﾟ☆<br>
-    ﾏｨぷろふぃｰる図鑑 ♡ ぉ気に入りゎ見つかったｶﾅ??<br>
-    ☆ﾟ･:*:･｡★,｡･:*:･ﾟ🌺
+    <div class="marquee">
+      <span>☆ ぅちょそ大歓迎ｯｯ♡ ぅちょそまｯてるょ〜!! ☆</span>
+    </div>
+
+    <h2 class="section-title">♡ きゃらくたぁ一覧ｯ!! ♡</h2>
+
+    <main>
+      <div class="character-grid" id="character-grid"></div>
+    </main>
+
+    <div class="bottom-deco">
+      ☆ﾟ.*･｡ﾟ ♡ LOVE & PEACE ♡ ﾟ｡･*.ﾟ☆
+    </div>
+
+    <footer>
+      © ﾏｨOC図鑑 ☆ ALL CHARACTERS ARE MINE ♡
+    </footer>
+
   </div>
 
-  <div class="grid" id="grid"></div>
-</main>
+  <script>
+    const characters = [
+      {
+        id: "001",
+        name: "CHARACTER 001",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: ""
+      },
+      {
+        id: "002",
+        name: "CHARACTER 002",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: ""
+      },
+      {
+        id: "003",
+        name: "CHARACTER 003",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: ""
+      },
+      {
+        id: "004",
+        name: "CHARACTER 004",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: ""
+      },
+      {
+        id: "005",
+        name: "CHARACTER 005",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: ""
+      },
+      {
+        id: "006",
+        name: "CHARACTER 006",
+        description: "♡ ｺｺに紹介文 ♡",
+        image: ""
+      }
+    ];
 
-<footer>
-  🌺 ☆★ ﾏｨOC図鑑 ★☆ 🌺<br>
-  ぃつも見にきてくれてぁりがとｯ♡<br>
-  (っ´ω`c) LOVE U FOREVER ♡
-</footer>
+    const grid = document.getElementById("character-grid");
 
-<script>
-/*
-  キャラを追加するときは、この一覧に1人ずつ追加してね。
-  imageには画像のパス、nameにはキャラ名、tagには分類を入力。
-*/
-const characters = [
-  {id:"001", name:"CHARACTER 001", tag:"Original Character", image:""},
-  {id:"002", name:"CHARACTER 002", tag:"Original Character", image:""},
-  {id:"003", name:"CHARACTER 003", tag:"Original Character", image:""},
-  {id:"004", name:"CHARACTER 004", tag:"Original Character", image:""},
-  {id:"005", name:"CHARACTER 005", tag:"Original Character", image:""},
-  {id:"006", name:"CHARACTER 006", tag:"Original Character", image:""}
-];
+    function makeText(tag, className, content) {
+      const element = document.createElement(tag);
+      element.className = className;
+      element.textContent = content;
+      return element;
+    }
 
-const grid = document.getElementById("grid");
+    characters.forEach((character) => {
+      const card = document.createElement("article");
+      card.className = "character-card";
 
-function safeText(value) {
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#39;"
-  })[char]);
-}
+      const link = document.createElement("a");
+      link.href = "profile.html?id=" + encodeURIComponent(character.id);
+      link.setAttribute(
+        "aria-label",
+        character.name + " のプロフィールを見る"
+      );
 
-grid.innerHTML = characters.map(c => {
-  const id = safeText(c.id);
-  const name = safeText(c.name);
-  const tag = safeText(c.tag);
+      const imageBox = document.createElement("div");
+      imageBox.className = "character-image";
 
-  const image = c.image
-    ? `<img src="${safeText(c.image)}" alt="${name}" onerror="this.remove()">`
-    : "";
+      if (character.image) {
+        const img = document.createElement("img");
+        img.src = character.image;
+        img.alt = character.name;
+        img.loading = "lazy";
 
-  return `
-    <a class="card" href="profile.html?id=${encodeURIComponent(c.id)}">
-      <div class="art">
-        ${image}
-        <span class="art-number">☆ FILE NO.${id} ☆</span>
-        <span class="art-word">MY OC ♡</span>
-      </div>
-      <div class="info">
-        <div class="file">♡ NO.${id} ♡</div>
-        <div class="name">${name}</div>
-        <span class="tag">${tag}</span>
-        <div class="view">ﾌﾟﾛﾌを見るｯ!! ↗ ♡</div>
-      </div>
-    </a>
-  `;
-}).join("");
-</script>
+        img.onerror = () => {
+          imageBox.replaceChildren();
+          imageBox.textContent = "♡";
+        };
+
+        imageBox.appendChild(img);
+      } else {
+        imageBox.textContent = "♡";
+      }
+
+      const info = document.createElement("div");
+      info.className = "character-info";
+
+      info.appendChild(
+        makeText("span", "character-number", "No. " + character.id)
+      );
+
+      info.appendChild(
+        makeText("h3", "character-name", character.name)
+      );
+
+      info.appendChild(
+        makeText("p", "character-description", character.description)
+      );
+
+      info.appendChild(
+        makeText("span", "profile-link", "♡ PROFILE ♡")
+      );
+
+      link.appendChild(imageBox);
+      link.appendChild(info);
+      card.appendChild(link);
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
