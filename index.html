@@ -10,9 +10,11 @@
     :root {
       --hot: #ff1493;
       --pink: #ff69b4;
-      --light-pink: #ffc0df;
+      --pale: #ffc6e5;
       --black: #160711;
+      --wine: #4b002b;
       --white: #fff8fc;
+      --gold: #ffe7a3;
     }
 
     * {
@@ -26,10 +28,12 @@
     body {
       margin: 0;
       color: var(--white);
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      line-height: 1.8;
       background-color: var(--black);
       background-image:
-        radial-gradient(ellipse at 20% 20%, #ff149922 0 2px, transparent 3px),
-        radial-gradient(ellipse at 80% 60%, #ff69b422 0 2px, transparent 3px),
+        radial-gradient(circle, #ffffffbb 0.8px, transparent 1.5px),
+        radial-gradient(circle, #ff69b4aa 1px, transparent 2px),
         repeating-linear-gradient(
           135deg,
           #ff14990b 0px,
@@ -37,9 +41,8 @@
           transparent 4px,
           transparent 12px
         );
-      background-size: 28px 28px, 34px 34px, auto;
-      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-      line-height: 1.8;
+      background-size: 31px 31px, 47px 47px, auto;
+      background-position: 0 0, 14px 19px, 0 0;
     }
 
     a {
@@ -48,37 +51,80 @@
     }
 
     .page-frame {
-      width: min(100% - 24px, 1000px);
-      margin: 20px auto;
+      position: relative;
+      width: min(100% - 20px, 1000px);
+      margin: 18px auto;
+      padding: 5px;
       border: 3px solid var(--hot);
-      box-shadow: 0 0 18px #ff149955;
-      background: #160711ee;
+      outline: 2px dashed var(--pale);
+      outline-offset: 3px;
+      box-shadow:
+        0 0 15px #ff149977,
+        0 0 35px #ff149933;
+      background: #160711f5;
+    }
+
+    .leopard-band {
+      height: 20px;
+      background-color: #ff69b4;
+      background-image:
+        radial-gradient(ellipse at 25% 35%, #160711 0 3px, transparent 4px),
+        radial-gradient(ellipse at 75% 70%, #160711 0 4px, transparent 5px),
+        radial-gradient(ellipse at 55% 15%, #a00055 0 2px, transparent 3px),
+        radial-gradient(ellipse at 10% 85%, #a00055 0 2px, transparent 3px);
+      background-size: 35px 28px, 43px 31px, 29px 24px, 39px 29px;
+      border-bottom: 2px solid white;
     }
 
     header {
-      padding: 24px 14px 18px;
+      position: relative;
+      overflow: hidden;
+      padding: 24px 12px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #ff1493, #ff69b4, #ff1493);
+      background:
+        radial-gradient(circle at 12% 25%, #ffffff55 0 2px, transparent 3px),
+        radial-gradient(circle at 86% 70%, #ffffff55 0 2px, transparent 3px),
+        linear-gradient(135deg, #ff1493, #ff69b4 50%, #d90079);
+      background-size: 27px 27px, 35px 35px, auto;
       border-bottom: 4px double white;
+    }
+
+    .header-deco {
+      margin: 0 0 8px;
+      color: white;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px #8c0046;
     }
 
     .site-title {
       margin: 0;
       color: white;
-      font-size: clamp(24px, 5vw, 38px);
+      font-size: clamp(25px, 6vw, 42px);
       font-weight: 1000;
+      letter-spacing: 2px;
       text-shadow:
         2px 2px 0 #a00055,
-        4px 4px 0 #4a0028;
-      letter-spacing: 2px;
+        4px 4px 0 #4a0028,
+        0 0 12px white;
     }
 
     .site-subtitle {
-      margin: 5px 0 0;
+      margin: 8px 0 0;
       color: white;
-      font-size: 11px;
-      font-weight: bold;
+      font-size: 10px;
+      font-weight: 900;
       letter-spacing: 3px;
+      text-shadow: 1px 1px #8c0046;
+    }
+
+    .hibiscus {
+      display: inline-block;
+      margin: 0 4px;
+      font-size: 23px;
+      vertical-align: middle;
+      filter: drop-shadow(0 0 5px #fff);
     }
 
     nav {
@@ -86,21 +132,21 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      padding: 12px;
+      padding: 14px 8px;
       background: #260817;
       border-bottom: 2px dashed var(--pink);
     }
 
     nav a {
       display: inline-block;
-      padding: 5px 18px;
+      padding: 5px 16px;
       color: white;
-      background: var(--hot);
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
       border: 2px solid white;
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: 900;
       box-shadow: 3px 3px 0 #7a003e;
+      font-size: 12px;
+      font-weight: 1000;
+      text-shadow: 1px 1px #a00055;
       transition: transform 0.2s;
     }
 
@@ -109,45 +155,64 @@
     }
 
     .hero {
-      padding: 32px 16px 24px;
+      position: relative;
+      padding: 30px 12px 27px;
       text-align: center;
-      background: radial-gradient(circle at center, #ff149928, transparent 70%);
+      background:
+        radial-gradient(ellipse at center, #ff149932, transparent 70%);
+    }
+
+    .hero-deco {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
     .hero h2 {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: #ff9ed2;
-      font-size: clamp(21px, 4.5vw, 32px);
+      font-size: clamp(21px, 4.7vw, 34px);
       font-weight: 1000;
-      text-shadow: 2px 2px 0 #8c0046;
+      text-shadow:
+        2px 2px 0 #8c0046,
+        0 0 10px #ff149988;
     }
 
     .love-badge {
       display: inline-block;
-      padding: 4px 15px;
+      padding: 5px 16px;
       color: white;
       background: var(--hot);
       border: 2px solid white;
       outline: 2px dashed var(--pink);
       outline-offset: 3px;
       font-size: 10px;
-      font-weight: 900;
+      font-weight: 1000;
       letter-spacing: 2px;
     }
 
-    /* ♡ 平成ギャル風・うちよそバナー ♡ */
+    .hero-bottom {
+      margin: 17px 0 0;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+      text-shadow: 1px 1px #a00055;
+    }
+
+    /* ♡ うちよそバナー：右から左へ ♡ */
     .marquee {
       overflow: hidden;
       white-space: nowrap;
-      padding: 11px 0;
+      padding: 10px 0;
       color: white;
-      background: var(--hot);
+      background: linear-gradient(90deg, #d90079, #ff1493, #d90079);
       border-top: 2px dashed white;
       border-bottom: 2px dashed white;
-      font-size: 12px;
-      font-weight: 900;
-      line-height: 1.9;
-      text-shadow: 1px 1px 0 #a00055;
+      font-size: 13px;
+      font-weight: 1000;
+      text-shadow: 1px 1px #a00055;
     }
 
     .marquee span {
@@ -158,56 +223,71 @@
 
     @keyframes gyaru-scroll {
       from {
-        transform: translateX(-100%);
-      }
-
-      to {
         transform: translateX(100vw);
+      }
+      to {
+        transform: translateX(-100%);
       }
     }
 
-    .section-title {
-      margin: 0;
-      padding: 18px 10px;
-      color: white;
+    .section-heading {
+      padding: 17px 8px 13px;
       text-align: center;
-      font-size: clamp(20px, 4vw, 28px);
+      background: #260817;
+      border-bottom: 2px dashed var(--pink);
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: white;
+      font-size: clamp(21px, 4vw, 29px);
       font-weight: 1000;
-      text-shadow: 2px 2px 0 #a00055;
-      background: repeating-linear-gradient(
-        45deg,
-        #ff1493 0px,
-        #ff1493 10px,
-        #d90079 10px,
-        #d90079 20px
-      );
-      border-top: 3px solid white;
-      border-bottom: 3px solid white;
+      text-shadow:
+        2px 2px 0 #a00055,
+        0 0 8px #ff149977;
+    }
+
+    .section-heading p {
+      margin: 4px 0 0;
+      color: var(--pale);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
     .character-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 17px;
       padding: 22px;
     }
 
     .character-card {
       min-width: 0;
       overflow: hidden;
-      color: var(--white);
       background: #260817;
       border: 3px solid var(--pink);
-      box-shadow: 4px 4px 0 #850047;
+      outline: 1px dashed white;
+      outline-offset: -6px;
+      box-shadow:
+        4px 4px 0 #850047,
+        0 0 12px #ff149922;
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .character-card:hover {
       transform: translateY(-5px) rotate(-1deg);
-      box-shadow: 6px 7px 0 #ff149966;
+      box-shadow:
+        6px 7px 0 #ff149966,
+        0 0 18px #ff149955;
+    }
+
+    .character-card a {
+      display: block;
     }
 
     .character-image {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -215,15 +295,26 @@
       aspect-ratio: 3 / 4;
       overflow: hidden;
       color: white;
-      background: repeating-linear-gradient(
-        135deg,
-        #ff149922 0px,
-        #ff149922 8px,
-        #160711 8px,
-        #160711 16px
-      );
+      background-color: #3a1026;
+      background-image:
+        radial-gradient(ellipse at 25% 35%, #ff69b4 0 5px, transparent 6px),
+        radial-gradient(ellipse at 75% 70%, #ff1493 0 6px, transparent 7px),
+        radial-gradient(ellipse at 55% 15%, #a00055 0 3px, transparent 4px);
+      background-size: 38px 33px, 45px 39px, 32px 30px;
       border-bottom: 3px dashed var(--pink);
-      font-size: 38px;
+      font-size: 40px;
+      text-shadow: 0 0 10px white;
+    }
+
+    .character-image::after {
+      content: "✧･ﾟ: *✧･ﾟ:*";
+      position: absolute;
+      right: 5px;
+      bottom: 4px;
+      color: white;
+      font-size: 10px;
+      text-shadow: 0 0 5px #ff1493;
+      pointer-events: none;
     }
 
     .character-image img {
@@ -234,31 +325,32 @@
     }
 
     .character-info {
-      padding: 10px;
+      padding: 11px 9px 12px;
       text-align: center;
     }
 
     .character-number {
       display: inline-block;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       padding: 1px 9px;
       color: white;
       background: var(--hot);
       border: 1px solid white;
       font-size: 9px;
-      font-weight: 900;
+      font-weight: 1000;
     }
 
     .character-name {
       margin: 0;
       color: #ff9ed2;
-      font-size: clamp(14px, 2.5vw, 20px);
+      font-size: clamp(13px, 2.5vw, 20px);
       font-weight: 1000;
+      text-shadow: 1px 1px #a00055;
       overflow-wrap: anywhere;
     }
 
     .character-description {
-      margin: 5px 0 10px;
+      margin: 6px 0 10px;
       color: #f8c9e3;
       font-size: 11px;
       overflow-wrap: anywhere;
@@ -266,54 +358,70 @@
 
     .profile-link {
       display: block;
-      padding: 6px 4px;
+      padding: 5px 3px;
       color: white;
-      background: var(--hot);
+      background: linear-gradient(90deg, #d90079, #ff1493, #d90079);
       border: 1px solid white;
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 1000;
+      text-shadow: 1px 1px #a00055;
     }
 
     .profile-link:hover {
       color: var(--hot);
       background: white;
+      text-shadow: none;
     }
 
     .bottom-deco {
-      padding: 18px 10px;
+      padding: 18px 8px;
       color: #ff9ed2;
       text-align: center;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 2px;
+      background: #260817;
       border-top: 2px dashed var(--pink);
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 1px;
+      text-shadow: 0 0 7px #ff149977;
+    }
+
+    .bottom-deco .small {
+      display: block;
+      margin-top: 5px;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2px;
     }
 
     footer {
-      padding: 15px 10px;
+      padding: 13px 8px;
       color: white;
       text-align: center;
-      background: var(--hot);
+      background: linear-gradient(135deg, #ff1493, #d90079);
       border-top: 3px double white;
       font-size: 10px;
-      font-weight: bold;
+      font-weight: 900;
       letter-spacing: 1px;
     }
 
     @media (max-width: 650px) {
+      .page-frame {
+        width: calc(100% - 14px);
+        margin: 10px auto;
+      }
+
       .character-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
         padding: 14px;
       }
 
-      .page-frame {
-        width: calc(100% - 14px);
-        margin: 10px auto;
+      .hero {
+        padding: 25px 8px;
       }
 
-      .hero {
-        padding: 26px 10px 22px;
+      .character-info {
+        padding: 9px 7px 10px;
       }
     }
 
@@ -323,14 +431,22 @@
         padding: 10px;
       }
 
-      .character-info {
-        padding: 7px;
+      nav {
+        gap: 7px;
+      }
+
+      nav a {
+        padding: 5px 11px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .marquee span {
         animation: none;
+      }
+
+      * {
+        scroll-behavior: auto;
       }
     }
   </style>
@@ -339,9 +455,20 @@
 <body>
   <div class="page-frame">
 
+    <div class="leopard-band"></div>
+
     <header>
+      <p class="header-deco">
+        ✧･ﾟ: *✧･ﾟ:* ♡ LOVE MY BABIES ♡ *:･ﾟ✧*:･ﾟ✧
+      </p>
+
       <h1 class="site-title">☆★ ﾏｨOC図鑑 ★☆</h1>
-      <p class="site-subtitle">♡ MY ORIGINAL CHARACTERS ♡</p>
+
+      <p class="site-subtitle">
+        <span class="hibiscus">🌺</span>
+        MY ORIGINAL CHARACTERS
+        <span class="hibiscus">🌺</span>
+      </p>
     </header>
 
     <nav>
@@ -350,22 +477,35 @@
     </nav>
 
     <section class="hero">
+      <p class="hero-deco">｡ﾟﾟ･｡･ﾟﾟ｡ ♡ ｡ﾟﾟ･｡･ﾟﾟ｡</p>
+
       <h2>ょぅこそｯ!! ｩﾁのOC図鑑へ♡</h2>
+
       <span class="love-badge">♡ LOVE MY BABIES ♡</span>
+
+      <p class="hero-bottom">
+        ✧ ｩﾁのかゎぃぃ子たちを見てｯてねｯ ✧
+      </p>
     </section>
 
     <div class="marquee">
       <span>☆ ぅちょそ大歓迎ｯｯ♡ ぅちょそまｯてるょ〜!! ☆</span>
     </div>
 
-    <h2 class="section-title">♡ きゃらくたぁ一覧ｯ!! ♡</h2>
+    <div class="section-heading">
+      <h2>♡ きゃらくたぁ一覧ｯ!! ♡</h2>
+      <p>｡･:*:･ﾟ★ SPECIAL COLLECTION ★ﾟ･:*:･｡</p>
+    </div>
 
     <main>
       <div class="character-grid" id="character-grid"></div>
     </main>
 
+    <div class="leopard-band"></div>
+
     <div class="bottom-deco">
-      ☆ﾟ.*･｡ﾟ ♡ LOVE & PEACE ♡ ﾟ｡･*.ﾟ☆
+      🌺 ☆ﾟ.*･｡ﾟ ♡ LOVE & PEACE ♡ ﾟ｡･*.ﾟ☆ 🌺
+      <span class="small">♡ ﾐﾝﾅの推Ｕが見つかりますょぅにｯ ♡</span>
     </div>
 
     <footer>
