@@ -2,139 +2,522 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OC ARCHIVE</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #101010;
-      color: #eeeae3;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-    a { color: inherit; text-decoration: none; }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 7%;
-      border-bottom: 1px solid #333;
-      letter-spacing: 3px;
-    }
-    .logo { font-size: 15px; }
-    nav { font: 10px Arial, sans-serif; letter-spacing: 2px; }
-    nav a { margin-left: 20px; }
-    .hero {
-      min-height: 70vh;
-      padding: 100px 8% 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        radial-gradient(ellipse at 80% 40%, #39302c 0%, transparent 45%),
-        #101010;
-    }
-    .eyebrow {
-      color: #b6a18a;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 5px;
-    }
-    h1 {
-      margin: 24px 0;
-      font-size: clamp(48px, 10vw, 110px);
-      line-height: .95;
-      font-weight: normal;
-      letter-spacing: -3px;
-    }
-    .hero p {
-      color: #aaa49c;
-      font-size: 13px;
-      line-height: 2;
-      letter-spacing: 2px;
-    }
-    .enter {
-      display: inline-block;
-      width: fit-content;
-      margin-top: 32px;
-      padding: 15px 24px;
-      border: 1px solid #82715f;
-      font: 10px Arial, sans-serif;
-      letter-spacing: 3px;
-      transition: .3s;
-    }
-    .enter:hover { background: #eeeae3; color: #101010; }
-    section { padding: 65px 8%; }
-    .section-label {
-      color: #b6a18a;
-      font: 10px Arial, sans-serif;
-      letter-spacing: 4px;
-    }
-    h2 { font-size: 30px; font-weight: normal; }
-    .intro {
-      max-width: 500px;
-      color: #aaa49c;
-      font-size: 13px;
-      line-height: 2.2;
-    }
-    .divider { border: 0; border-top: 1px solid #333; }
-    footer {
-      padding: 25px 8%;
-      color: #777;
-      font: 10px Arial, sans-serif;
-      letter-spacing: 2px;
-    }
-    @media (max-width: 600px) {
-      header { padding: 20px 6%; }
-      nav a { margin-left: 8px; }
-      .hero { min-height: 65vh; padding: 80px 7%; }
-      section { padding: 50px 7%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>♡ CHARACTERS | OC ARCHIVE ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap');
+
+:root {
+  --pink: #ff39a8;
+  --hot: #ff008c;
+  --light: #ffb9df;
+  --pale: #fff0f8;
+  --black: #160914;
+  --purple: #9c3c83;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--pale);
+  background-color: var(--black);
+  background-image:
+    radial-gradient(ellipse at 15% 10%, #57143e 0%, transparent 35%),
+    radial-gradient(ellipse at 90% 60%, #3c1237 0%, transparent 35%);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input { font: inherit; }
+
+.sparkle {
+  color: var(--light);
+  text-shadow: 0 0 8px var(--pink), 0 0 18px var(--pink);
+}
+
+header {
+  position: relative;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #10070f;
+  border-bottom: 3px solid var(--pink);
+  box-shadow: 0 4px 20px #ff008c55;
+}
+
+.logo {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 var(--hot), 0 0 15px var(--pink);
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+nav a:hover { color: var(--pink); }
+
+.hero {
+  position: relative;
+  padding: 58px 6% 48px;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, #64204d 0%, #260f24 52%, transparent 80%);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  font-size: 38px;
+  opacity: .85;
+  pointer-events: none;
+}
+
+.hero::before {
+  content: "🌺";
+  left: 7%;
+  top: 30px;
+  transform: rotate(-18deg);
+}
+
+.hero::after {
+  content: "💖";
+  right: 7%;
+  bottom: 30px;
+  transform: rotate(16deg);
+}
+
+.kicker {
+  color: var(--light);
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 900;
+}
+
+h1 {
+  margin: 18px 0 8px;
+  font-size: clamp(36px, 8vw, 76px);
+  line-height: 1.12;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    3px 3px 0 var(--hot),
+    6px 6px 0 #8b145d,
+    0 0 24px #ff39a8aa;
+}
+
+.hero-sub {
+  margin: 18px 0 0;
+  color: var(--light);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sticker {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 23px;
+  color: white;
+  background: linear-gradient(135deg, #ff75c8, #ff008c);
+  border: 2px solid white;
+  border-radius: 30px;
+  box-shadow: 0 0 0 4px var(--pink), 0 5px 18px #ff008c66;
+  font-size: 12px;
+  font-weight: 900;
+  transform: rotate(-2deg);
+}
+
+main {
+  width: min(1120px, 92%);
+  margin: auto;
+  padding: 25px 0 65px;
+}
+
+.marquee {
+  margin: 0 0 30px;
+  padding: 11px;
+  color: white;
+  background: var(--hot);
+  border: 2px dashed white;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  box-shadow: 0 0 18px #ff008c55;
+}
+
+.section-title {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 27px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0 var(--hot);
+}
+
+.section-desc {
+  margin: 0;
+  color: #eab4d5;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+#search {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 17px;
+  color: white;
+  background: #241321;
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  outline: none;
+  box-shadow: 0 0 12px #ff39a822;
+  font-size: 13px;
+}
+
+#search::placeholder { color: #c78bac; }
+
+#search:focus {
+  border-color: white;
+  box-shadow: 0 0 15px var(--pink);
+}
+
+.count {
+  margin: 0 0 16px;
+  color: var(--light);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+  padding: 7px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #ff80ca 0px,
+      #ff80ca 5px,
+      #ff39a8 5px,
+      #ff39a8 10px
+    );
+  border: 2px solid #ffc7e7;
+  border-radius: 17px;
+  box-shadow: 0 5px 0 #9b155e, 0 0 18px #ff39a844;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card::before {
+  content: "♡ ✦ ♡";
+  position: absolute;
+  z-index: 2;
+  top: -11px;
+  right: 9px;
+  padding: 3px 7px;
+  color: white;
+  background: var(--hot);
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 8px 0 #9b155e, 0 0 26px #ff39a899;
+}
+
+.art {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  color: white;
+  background:
+    radial-gradient(ellipse at center, #52203f 0%, #231020 70%);
+  border: 2px solid #fff;
+  text-align: center;
+}
+
+.art::before {
+  content: "✧･ﾟ: *✧･ﾟ:*";
+  color: var(--pink);
+  font-size: 15px;
+  text-shadow: 0 0 10px var(--pink);
+}
+
+.art::after {
+  content: "♡";
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  color: #ff76c4;
+  font-size: 30px;
+  text-shadow: 0 0 10px var(--pink);
+}
+
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.art img:not([src=""]) {
+  z-index: 1;
+}
+
+.art-number {
+  color: var(--light);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.art-word {
+  color: white;
+  font-size: 23px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0 var(--hot), 0 0 12px var(--pink);
+}
+
+.info {
+  padding: 14px 10px 12px;
+  color: var(--black);
+  background: linear-gradient(180deg, #fff2fa, #ffcae8);
+  border: 2px solid #fff;
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+}
+
+.file {
+  color: #a51b68;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.name {
+  margin: 6px 0;
+  overflow-wrap: anywhere;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.tag {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 8px;
+  color: white;
+  background: #ed2a94;
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow-wrap: anywhere;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.view {
+  margin-top: 14px;
+  padding-top: 10px;
+  color: #a51b68;
+  border-top: 1px dashed #e477b7;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.empty {
+  padding: 30px;
+  color: var(--light);
+  text-align: center;
+  font-size: 13px;
+}
+
+footer {
+  padding: 28px 6%;
+  color: #ffb9df;
+  background: #10070f;
+  border-top: 3px solid var(--pink);
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+@media(max-width: 700px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+  .hero { padding: 50px 5% 42px; }
+  main { width: 92%; }
+  .name { font-size: 17px; }
+}
+
+@media(max-width: 360px) {
+  .grid { gap: 10px; }
+  .art-word { font-size: 19px; }
+  .info { padding: 10px 7px; }
+  nav { gap: 9px; }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <a class="logo" href="#">OC ARCHIVE.</a>
-    <nav>
-      <a href="#about">ABOUT</a>
-      <a href="#index">INDEX</a>
-    </nav>
-  </header>
+<header>
+  <a class="logo" href="index.html">♡ OC ARCHIVE ♡</a>
+  <nav>
+    <a href="index.html">TOP</a>
+    <a href="characters.html">CHARACTERS</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow">ORIGINAL CHARACTER DATABASE</div>
-      <h1>ILLUSION<br>ARCHIVE.</h1>
-      <p>
-        Fictional lives, untold stories.<br>
-        A private collection of imaginary worlds.
-      </p>
-      <a class="enter" href="#index">ENTER THE ARCHIVE ↗</a>
-    </section>
+<section class="hero">
+  <div class="kicker">✦ WELCOME TO MY WORLD ✦</div>
+  <h1>MY LOVELY<br>CHARACTERS!</h1>
+  <p class="hero-sub">♡ ORIGINAL CHARACTERS COLLECTION ♡</p>
+  <div class="sticker">★ MY BABIES ARE THE BEST ★</div>
+</section>
 
-    <hr class="divider">
+<main>
+  <div class="marquee">
+    🌺 PINK × BLACK × LEOPARD 🌺 PRINCESS GYARU FOREVER 🌺
+  </div>
 
-    <section id="about">
-      <div class="section-label">01 / ABOUT</div>
-      <h2>A world of my own.</h2>
-      <p class="intro">
-        A collection of original characters, stories, and fragments
-        of imaginary worlds. Every character has a story of their own.
-      </p>
-    </section>
+  <section>
+    <h2 class="section-title">♡ CHARACTER INDEX ♡</h2>
+    <p class="section-desc">
+      Welcome to my precious character collection!<br>
+      Find your favorite character and enter their world. ✧
+    </p>
+  </section>
 
-    <hr class="divider">
+  <div class="tools">
+    <input
+      id="search"
+      type="search"
+      placeholder="♡ Search name / tag / ID..."
+      aria-label="キャラクター検索"
+    >
+  </div>
 
-    <section id="index">
-      <div class="section-label">02 / CHARACTER INDEX</div>
-      <h2>Characters.</h2>
-      <p class="intro">
-        The archive is waiting to be filled.<br>
-        Character profiles will appear here soon.
-      </p>
-    </section>
-  </main>
+  <p class="count" id="count">★ LOADING CHARACTERS ★</p>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>
+    ☆ No characters found... Try another search! ☆
+  </p>
+</main>
 
-  <footer>OC ARCHIVE. — ALL CHARACTERS ARE FICTIONAL.</footer>
+<footer>
+  🌺 OC ARCHIVE 🌺<br>
+  ALL CHARACTERS ARE FICTIONAL ♡ MADE WITH LOVE ♡
+</footer>
+
+<script>
+/*
+  キャラクターを追加するときは、この一覧に1件ずつ追加してね。
+  image は画像URL。まだ画像がない場合は "" のままでOK。
+*/
+const characters = [
+  {id:"001", name:"CHARACTER 001", tag:"Original Character", image:""},
+  {id:"002", name:"CHARACTER 002", tag:"Original Character", image:""},
+  {id:"003", name:"CHARACTER 003", tag:"Original Character", image:""},
+  {id:"004", name:"CHARACTER 004", tag:"Original Character", image:""},
+  {id:"005", name:"CHARACTER 005", tag:"Original Character", image:""},
+  {id:"006", name:"CHARACTER 006", tag:"Original Character", image:""}
+];
+
+const grid = document.getElementById("grid");
+const search = document.getElementById("search");
+const count = document.getElementById("count");
+const empty = document.getElementById("empty");
+
+function safeText(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
+}
+
+function render() {
+  const q = search.value.trim().toLowerCase();
+
+  const filtered = characters.filter(c =>
+    (c.name + " " + c.tag + " " + c.id)
+      .toLowerCase()
+      .includes(q)
+  );
+
+  count.textContent = `★ ${filtered.length} CHARACTERS FOUND ★`;
+
+  grid.innerHTML = filtered.map(c => {
+    const id = safeText(c.id);
+    const name = safeText(c.name);
+    const tag = safeText(c.tag);
+    const image = c.image ? `
+      <img src="${safeText(c.image)}" alt="${name}"
+           onerror="this.remove()">
+    ` : "";
+
+    return `
+      <a class="card" href="profile.html?id=${encodeURIComponent(c.id)}">
+        <div class="art">
+          ${image}
+          <span class="art-number">FILE NO. ${id}</span>
+          <span class="art-word">MY OC ♡</span>
+        </div>
+        <div class="info">
+          <div class="file">♡ FILE NO. ${id}</div>
+          <div class="name">${name}</div>
+          <span class="tag">${tag}</span>
+          <div class="view">VIEW PROFILE ↗</div>
+        </div>
+      </a>
+    `;
+  }).join("");
+
+  empty.hidden = filtered.length !== 0;
+}
+
+search.addEventListener("input", render);
+render();
+</script>
 </body>
 </html>
