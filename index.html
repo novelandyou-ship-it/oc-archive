@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>♡ CHARACTERS | OC ARCHIVE ♡</title>
+<title>☆★ ﾏｨOC図鑑 ★☆</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap');
@@ -12,211 +12,145 @@
 :root {
   --pink: #ff39a8;
   --hot: #ff008c;
-  --light: #ffb9df;
-  --pale: #fff0f8;
+  --light: #ffbce2;
   --black: #160914;
-  --purple: #9c3c83;
+  --white: #fff1fa;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  color: var(--pale);
+  color: var(--white);
   background-color: var(--black);
   background-image:
-    radial-gradient(ellipse at 15% 10%, #57143e 0%, transparent 35%),
-    radial-gradient(ellipse at 90% 60%, #3c1237 0%, transparent 35%);
+    radial-gradient(ellipse at 10% 10%, #641342 0%, transparent 36%),
+    radial-gradient(ellipse at 90% 65%, #42113b 0%, transparent 38%);
   font-family: 'Zen Maru Gothic', sans-serif;
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button, input { font: inherit; }
-
-.sparkle {
-  color: var(--light);
-  text-shadow: 0 0 8px var(--pink), 0 0 18px var(--pink);
-}
+a { color: inherit; text-decoration: none; }
 
 header {
-  position: relative;
-  padding: 22px 6%;
+  padding: 17px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  background: #10070f;
+  background: #0e060d;
   border-bottom: 3px solid var(--pink);
-  box-shadow: 0 4px 20px #ff008c55;
+  box-shadow: 0 3px 18px #ff008c66;
 }
 
 .logo {
-  color: #fff;
-  font-size: 19px;
+  color: white;
+  font-size: 17px;
   font-weight: 900;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 0 var(--hot), 0 0 15px var(--pink);
+  letter-spacing: 1px;
+  text-shadow: 2px 2px var(--hot), 0 0 12px var(--pink);
 }
 
 nav {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   font-size: 11px;
   font-weight: 900;
 }
 
-nav a:hover { color: var(--pink); }
+nav a:hover { color: var(--light); }
 
 .hero {
-  position: relative;
-  padding: 58px 6% 48px;
+  padding: 45px 5% 35px;
   text-align: center;
-  overflow: hidden;
   background:
-    radial-gradient(ellipse at center, #64204d 0%, #260f24 52%, transparent 80%);
+    radial-gradient(ellipse at center, #64204d 0%, #291026 55%, transparent 80%);
 }
 
-.hero::before,
-.hero::after {
-  position: absolute;
-  font-size: 38px;
-  opacity: .85;
-  pointer-events: none;
-}
-
-.hero::before {
-  content: "🌺";
-  left: 7%;
-  top: 30px;
-  transform: rotate(-18deg);
-}
-
-.hero::after {
-  content: "💖";
-  right: 7%;
-  bottom: 30px;
-  transform: rotate(16deg);
-}
-
-.kicker {
+.tiny {
   color: var(--light);
-  font-size: 10px;
-  letter-spacing: 4px;
+  font-size: 11px;
   font-weight: 900;
-}
-
-h1 {
-  margin: 18px 0 8px;
-  font-size: clamp(36px, 8vw, 76px);
-  line-height: 1.12;
-  font-weight: 900;
-  color: #fff;
-  text-shadow:
-    3px 3px 0 var(--hot),
-    6px 6px 0 #8b145d,
-    0 0 24px #ff39a8aa;
-}
-
-.hero-sub {
-  margin: 18px 0 0;
-  color: var(--light);
-  font-size: 12px;
-  font-weight: 700;
   letter-spacing: 2px;
 }
 
-.sticker {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 10px 23px;
+h1 {
+  margin: 18px 0 12px;
   color: white;
-  background: linear-gradient(135deg, #ff75c8, #ff008c);
-  border: 2px solid white;
-  border-radius: 30px;
-  box-shadow: 0 0 0 4px var(--pink), 0 5px 18px #ff008c66;
+  font-size: clamp(30px, 7vw, 65px);
+  line-height: 1.25;
+  font-weight: 900;
+  text-shadow: 3px 3px 0 var(--hot), 0 0 18px #ff39a8aa;
+}
+
+.subtitle {
+  color: var(--light);
   font-size: 12px;
+  line-height: 2;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 17px;
+  padding: 9px 17px;
+  color: white;
+  background: linear-gradient(135deg, #ff7aca, #ff008c);
+  border: 2px solid white;
+  border-radius: 24px;
+  box-shadow: 0 0 0 3px var(--pink), 0 4px 12px #ff008c66;
+  font-size: 11px;
   font-weight: 900;
   transform: rotate(-2deg);
 }
 
-main {
-  width: min(1120px, 92%);
-  margin: auto;
-  padding: 25px 0 65px;
-}
-
 .marquee {
-  margin: 0 0 30px;
-  padding: 11px;
+  padding: 11px 5%;
   color: white;
   background: var(--hot);
-  border: 2px dashed white;
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed white;
   text-align: center;
   font-size: 11px;
   font-weight: 900;
-  letter-spacing: 2px;
-  box-shadow: 0 0 18px #ff008c55;
-}
-
-.section-title {
-  margin: 0 0 8px;
-  color: white;
-  font-size: 27px;
-  font-weight: 900;
-  text-shadow: 2px 2px 0 var(--hot);
-}
-
-.section-desc {
-  margin: 0;
-  color: #eab4d5;
-  font-size: 12px;
   line-height: 1.9;
 }
 
-.tools {
-  display: flex;
-  gap: 10px;
-  margin: 24px 0;
+main {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 32px 0 55px;
 }
 
-#search {
-  width: 100%;
-  min-width: 0;
-  padding: 14px 17px;
+.section-title {
+  margin: 0 0 10px;
   color: white;
-  background: #241321;
-  border: 2px solid var(--pink);
-  border-radius: 12px;
-  outline: none;
-  box-shadow: 0 0 12px #ff39a822;
-  font-size: 13px;
+  font-size: clamp(22px, 4vw, 30px);
+  text-shadow: 2px 2px 0 var(--hot);
 }
 
-#search::placeholder { color: #c78bac; }
-
-#search:focus {
-  border-color: white;
-  box-shadow: 0 0 15px var(--pink);
+.description {
+  color: #f1b8d8;
+  font-size: 12px;
+  line-height: 2;
 }
 
-.count {
-  margin: 0 0 16px;
+.decor {
+  margin: 20px 0 26px;
+  padding: 13px;
   color: var(--light);
+  background: #281323;
+  border: 1px dashed var(--pink);
+  border-radius: 10px;
+  text-align: center;
   font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 1px;
+  line-height: 2;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 20px;
 }
 
 .card {
@@ -226,34 +160,34 @@ main {
   background:
     repeating-linear-gradient(
       135deg,
-      #ff80ca 0px,
-      #ff80ca 5px,
-      #ff39a8 5px,
-      #ff39a8 10px
+      #ff7dc9 0px,
+      #ff7dc9 5px,
+      #ff279f 5px,
+      #ff279f 10px
     );
-  border: 2px solid #ffc7e7;
-  border-radius: 17px;
-  box-shadow: 0 5px 0 #9b155e, 0 0 18px #ff39a844;
+  border: 2px solid #ffc9e9;
+  border-radius: 14px;
+  box-shadow: 0 5px 0 #8d1558, 0 0 16px #ff39a844;
   transition: transform .2s, box-shadow .2s;
 }
 
+.card:hover {
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: 0 8px 0 #8d1558, 0 0 24px #ff39a899;
+}
+
 .card::before {
-  content: "♡ ✦ ♡";
+  content: "☆ﾐ ♡ ﾐ☆";
   position: absolute;
-  z-index: 2;
   top: -11px;
-  right: 9px;
-  padding: 3px 7px;
+  right: 8px;
+  z-index: 2;
+  padding: 4px 8px;
   color: white;
   background: var(--hot);
   border: 1px solid white;
   border-radius: 20px;
   font-size: 10px;
-}
-
-.card:hover {
-  transform: translateY(-6px) rotate(-1deg);
-  box-shadow: 0 8px 0 #9b155e, 0 0 26px #ff39a899;
 }
 
 .art {
@@ -263,13 +197,11 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   overflow: hidden;
   color: white;
-  background:
-    radial-gradient(ellipse at center, #52203f 0%, #231020 70%);
-  border: 2px solid #fff;
-  text-align: center;
+  background: radial-gradient(ellipse at center, #5b2046, #1a0b18 75%);
+  border: 2px solid white;
 }
 
 .art::before {
@@ -280,63 +212,60 @@ main {
 }
 
 .art::after {
-  content: "♡";
+  content: "🌺 ♡";
   position: absolute;
-  bottom: 8px;
-  right: 12px;
-  color: #ff76c4;
-  font-size: 30px;
+  right: 8px;
+  bottom: 7px;
+  z-index: 2;
+  font-size: 21px;
   text-shadow: 0 0 10px var(--pink);
 }
 
 .art img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  inset: 0;
-}
-
-.art img:not([src=""]) {
-  z-index: 1;
 }
 
 .art-number {
   color: var(--light);
-  font-size: 11px;
+  font-size: 10px;
+  letter-spacing: 2px;
   font-weight: 900;
-  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px black;
 }
 
 .art-word {
-  color: white;
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 900;
   text-shadow: 2px 2px 0 var(--hot), 0 0 12px var(--pink);
 }
 
 .info {
-  padding: 14px 10px 12px;
-  color: var(--black);
-  background: linear-gradient(180deg, #fff2fa, #ffcae8);
-  border: 2px solid #fff;
+  padding: 13px 10px;
+  color: #290c20;
+  background: linear-gradient(180deg, #fff0f8, #ffc9e7);
+  border: 2px solid white;
   border-top: 0;
-  border-radius: 0 0 9px 9px;
+  border-radius: 0 0 8px 8px;
+  overflow-wrap: anywhere;
 }
 
 .file {
-  color: #a51b68;
+  color: #a21c68;
   font-size: 9px;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .name {
-  margin: 6px 0;
-  overflow-wrap: anywhere;
-  font-size: 19px;
+  margin: 8px 0;
+  font-size: 18px;
   font-weight: 900;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .tag {
@@ -344,113 +273,101 @@ main {
   max-width: 100%;
   padding: 4px 8px;
   color: white;
-  background: #ed2a94;
+  background: #e92b94;
   border: 1px solid white;
   border-radius: 20px;
-  overflow-wrap: anywhere;
   font-size: 10px;
-  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .view {
-  margin-top: 14px;
+  margin-top: 13px;
   padding-top: 10px;
-  color: #a51b68;
+  color: #a21c68;
   border-top: 1px dashed #e477b7;
   font-size: 10px;
   font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.empty {
-  padding: 30px;
-  color: var(--light);
-  text-align: center;
-  font-size: 13px;
+  line-height: 1.8;
 }
 
 footer {
-  padding: 28px 6%;
-  color: #ffb9df;
-  background: #10070f;
+  padding: 24px 5%;
+  color: var(--light);
+  background: #0e060d;
   border-top: 3px solid var(--pink);
   text-align: center;
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 2;
+  line-height: 2.2;
 }
 
-@media(max-width: 700px) {
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
-  .hero { padding: 50px 5% 42px; }
-  main { width: 92%; }
-  .name { font-size: 17px; }
+@media(max-width: 650px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .hero { padding: 38px 5% 32px; }
+  .name { font-size: 16px; }
 }
 
 @media(max-width: 360px) {
-  .grid { gap: 10px; }
-  .art-word { font-size: 19px; }
+  .grid { gap: 9px; }
   .info { padding: 10px 7px; }
-  nav { gap: 9px; }
+  .art-word { font-size: 19px; }
+  nav { gap: 8px; }
 }
 </style>
 </head>
 
 <body>
 <header>
-  <a class="logo" href="index.html">♡ OC ARCHIVE ♡</a>
+  <a class="logo" href="index.html">☆★ ﾏｨOC図鑑 ★☆</a>
   <nav>
-    <a href="index.html">TOP</a>
-    <a href="characters.html">CHARACTERS</a>
+    <a href="index.html">TOP ♡</a>
+    <a href="characters.html">きゃら一覧 ☆</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="kicker">✦ WELCOME TO MY WORLD ✦</div>
-  <h1>MY LOVELY<br>CHARACTERS!</h1>
-  <p class="hero-sub">♡ ORIGINAL CHARACTERS COLLECTION ♡</p>
-  <div class="sticker">★ MY BABIES ARE THE BEST ★</div>
+  <div class="tiny">☆.｡.:*･ﾟ WELCOME ･ﾟ*:.｡.☆</div>
+  <h1>ょぅこそｯ!!<br>ｩﾁのOC図鑑へ♡</h1>
+  <p class="subtitle">
+    💖 ｶﾜｨｨぁの子もｶｯｺｨｨぁの子も大集合ｯ!! 💖<br>
+    推Ｕを見つけてぃってねｯ☆ (ﾉ´ヮ`)ﾉ*: ･ﾟ
+  </p>
+  <div class="badge">♡ LOVE MY BABIES ♡</div>
 </section>
 
+<div class="marquee">
+  🌺 ﾟ･:*:･｡☆ ぉ気に入りの子を探Ｕてねｯ!! ☆｡･:*:･ﾟ 🌺
+</div>
+
 <main>
-  <div class="marquee">
-    🌺 PINK × BLACK × LEOPARD 🌺 PRINCESS GYARU FOREVER 🌺
-  </div>
-
-  <section>
-    <h2 class="section-title">♡ CHARACTER INDEX ♡</h2>
-    <p class="section-desc">
-      Welcome to my precious character collection!<br>
-      Find your favorite character and enter their world. ✧
-    </p>
-  </section>
-
-  <div class="tools">
-    <input
-      id="search"
-      type="search"
-      placeholder="♡ Search name / tag / ID..."
-      aria-label="キャラクター検索"
-    >
-  </div>
-
-  <p class="count" id="count">★ LOADING CHARACTERS ★</p>
-  <div class="grid" id="grid"></div>
-  <p class="empty" id="empty" hidden>
-    ☆ No characters found... Try another search! ☆
+  <h2 class="section-title">♡ きゃらくたぁ一覧ｯ!! ♡</h2>
+  <p class="description">
+    ぃらｯしゃぃませｯ☆ (≧▽≦)ﾉ<br>
+    ｺｺゎｩﾁの大切なOCたちのぉ部屋だょ♡<br>
+    気になる子をｸﾘｯｸしてねｯ!! ☆ﾐ
   </p>
+
+  <div class="decor">
+    🌺 ｡･:*:･ﾟ★,｡･:*:･ﾟ☆<br>
+    ﾏｨぷろふぃｰる図鑑 ♡ ぉ気に入りゎ見つかったｶﾅ??<br>
+    ☆ﾟ･:*:･｡★,｡･:*:･ﾟ🌺
+  </div>
+
+  <div class="grid" id="grid"></div>
 </main>
 
 <footer>
-  🌺 OC ARCHIVE 🌺<br>
-  ALL CHARACTERS ARE FICTIONAL ♡ MADE WITH LOVE ♡
+  🌺 ☆★ ﾏｨOC図鑑 ★☆ 🌺<br>
+  ぃつも見にきてくれてぁりがとｯ♡<br>
+  (っ´ω`c) LOVE U FOREVER ♡
 </footer>
 
 <script>
 /*
-  キャラクターを追加するときは、この一覧に1件ずつ追加してね。
-  image は画像URL。まだ画像がない場合は "" のままでOK。
+  キャラを追加するときは、この一覧に1人ずつ追加してね。
+  imageには画像のパス、nameにはキャラ名、tagには分類を入力。
 */
 const characters = [
   {id:"001", name:"CHARACTER 001", tag:"Original Character", image:""},
@@ -462,9 +379,6 @@ const characters = [
 ];
 
 const grid = document.getElementById("grid");
-const search = document.getElementById("search");
-const count = document.getElementById("count");
-const empty = document.getElementById("empty");
 
 function safeText(value) {
   return String(value).replace(/[&<>"']/g, char => ({
@@ -476,48 +390,31 @@ function safeText(value) {
   })[char]);
 }
 
-function render() {
-  const q = search.value.trim().toLowerCase();
+grid.innerHTML = characters.map(c => {
+  const id = safeText(c.id);
+  const name = safeText(c.name);
+  const tag = safeText(c.tag);
 
-  const filtered = characters.filter(c =>
-    (c.name + " " + c.tag + " " + c.id)
-      .toLowerCase()
-      .includes(q)
-  );
+  const image = c.image
+    ? `<img src="${safeText(c.image)}" alt="${name}" onerror="this.remove()">`
+    : "";
 
-  count.textContent = `★ ${filtered.length} CHARACTERS FOUND ★`;
-
-  grid.innerHTML = filtered.map(c => {
-    const id = safeText(c.id);
-    const name = safeText(c.name);
-    const tag = safeText(c.tag);
-    const image = c.image ? `
-      <img src="${safeText(c.image)}" alt="${name}"
-           onerror="this.remove()">
-    ` : "";
-
-    return `
-      <a class="card" href="profile.html?id=${encodeURIComponent(c.id)}">
-        <div class="art">
-          ${image}
-          <span class="art-number">FILE NO. ${id}</span>
-          <span class="art-word">MY OC ♡</span>
-        </div>
-        <div class="info">
-          <div class="file">♡ FILE NO. ${id}</div>
-          <div class="name">${name}</div>
-          <span class="tag">${tag}</span>
-          <div class="view">VIEW PROFILE ↗</div>
-        </div>
-      </a>
-    `;
-  }).join("");
-
-  empty.hidden = filtered.length !== 0;
-}
-
-search.addEventListener("input", render);
-render();
+  return `
+    <a class="card" href="profile.html?id=${encodeURIComponent(c.id)}">
+      <div class="art">
+        ${image}
+        <span class="art-number">☆ FILE NO.${id} ☆</span>
+        <span class="art-word">MY OC ♡</span>
+      </div>
+      <div class="info">
+        <div class="file">♡ NO.${id} ♡</div>
+        <div class="name">${name}</div>
+        <span class="tag">${tag}</span>
+        <div class="view">ﾌﾟﾛﾌを見るｯ!! ↗ ♡</div>
+      </div>
+    </a>
+  `;
+}).join("");
 </script>
 </body>
 </html>
