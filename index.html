@@ -2,614 +2,577 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>☆★ ﾏｨOC図鑑 ★☆</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>☆★ ﾏｨOC図鑑 ★☆</title>
 
-  <style>
-    :root {
-      --hot: #ff1493;
-      --pink: #ff69b4;
-      --pale: #ffc6e5;
-      --black: #160711;
-      --white: #fff8fc;
-      --gold: #ffe7a3;
-    }
+<style>
+:root {
+  --hot:#ff1493;
+  --pink:#ff69b4;
+  --pale:#ffc6e5;
+  --black:#160711;
+  --white:#fff8fc;
+  --gold:#ffe7a3;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* { box-sizing:border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+html { scroll-behavior:smooth; }
 
-    body {
-      margin: 0;
-      color: var(--white);
-      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-      line-height: 1.8;
-      background-color: var(--black);
-      background-image:
-        radial-gradient(circle, #ffffffbb 0.8px, transparent 1.5px),
-        radial-gradient(circle, #ff69b4aa 1px, transparent 2px),
-        repeating-linear-gradient(
-          135deg,
-          #ff14990b 0px,
-          #ff14990b 4px,
-          transparent 4px,
-          transparent 12px
-        );
-      background-size: 31px 31px, 47px 47px, auto;
-      background-position: 0 0, 14px 19px, 0 0;
-    }
+body {
+  margin:0;
+  color:var(--white);
+  font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  line-height:1.8;
+  background-color:var(--black);
+  background-image:
+    radial-gradient(circle,#ffffffbb .8px,transparent 1.5px),
+    radial-gradient(circle,#ff69b4aa 1px,transparent 2px),
+    repeating-linear-gradient(135deg,#ff14990b 0px,#ff14990b 4px,transparent 4px,transparent 12px);
+  background-size:31px 31px,47px 47px,auto;
+  background-position:0 0,14px 19px,0 0;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+a { color:inherit; text-decoration:none; }
 
-    .page-frame {
-      width: min(100% - 20px, 1000px);
-      margin: 18px auto;
-      padding: 5px;
-      border: 3px solid var(--hot);
-      outline: 2px dashed var(--pale);
-      outline-offset: 3px;
-      box-shadow: 0 0 15px #ff149977, 0 0 35px #ff149933;
-      background: #160711f5;
-    }
+.page-frame {
+  width:min(100% - 20px,1000px);
+  margin:18px auto;
+  padding:5px;
+  border:3px solid var(--hot);
+  outline:2px dashed var(--pale);
+  outline-offset:3px;
+  box-shadow:0 0 15px #ff149977,0 0 35px #ff149933;
+  background:#160711f5;
+}
 
-    .leopard-band {
-      height: 20px;
-      background-color: #ff69b4;
-      background-image:
-        radial-gradient(ellipse at 25% 35%, #160711 0 3px, transparent 4px),
-        radial-gradient(ellipse at 75% 70%, #160711 0 4px, transparent 5px),
-        radial-gradient(ellipse at 55% 15%, #a00055 0 2px, transparent 3px),
-        radial-gradient(ellipse at 10% 85%, #a00055 0 2px, transparent 3px);
-      background-size: 35px 28px, 43px 31px, 29px 24px, 39px 29px;
-      border-bottom: 2px solid white;
-    }
+.leopard-band {
+  height:20px;
+  background-color:#ff69b4;
+  background-image:
+    radial-gradient(ellipse at 25% 35%,#160711 0 3px,transparent 4px),
+    radial-gradient(ellipse at 75% 70%,#160711 0 4px,transparent 5px),
+    radial-gradient(ellipse at 55% 15%,#a00055 0 2px,transparent 3px),
+    radial-gradient(ellipse at 10% 85%,#a00055 0 2px,transparent 3px);
+  background-size:35px 28px,43px 31px,29px 24px,39px 29px;
+  border-bottom:2px solid white;
+}
 
-    header {
-      overflow: hidden;
-      padding: 24px 12px 20px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 12% 25%, #ffffff55 0 2px, transparent 3px),
-        radial-gradient(circle at 86% 70%, #ffffff55 0 2px, transparent 3px),
-        linear-gradient(135deg, #ff1493, #ff69b4 50%, #d90079);
-      background-size: 27px 27px, 35px 35px, auto;
-      border-bottom: 4px double white;
-    }
+header {
+  overflow:hidden;
+  padding:24px 12px 20px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 12% 25%,#ffffff55 0 2px,transparent 3px),
+    radial-gradient(circle at 86% 70%,#ffffff55 0 2px,transparent 3px),
+    linear-gradient(135deg,#ff1493,#ff69b4 50%,#d90079);
+  background-size:27px 27px,35px 35px,auto;
+  border-bottom:4px double white;
+}
 
-    .header-deco {
-      margin: 0 0 8px;
-      color: white;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-shadow: 1px 1px #8c0046;
-    }
+.header-deco {
+  margin:0 0 8px;
+  color:white;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-shadow:1px 1px #8c0046;
+}
 
-    .site-title {
-      margin: 0;
-      color: white;
-      font-size: clamp(25px, 6vw, 42px);
-      font-weight: 1000;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 0 #a00055, 4px 4px 0 #4a0028, 0 0 12px white;
-    }
+.site-title {
+  margin:0;
+  color:white;
+  font-size:clamp(25px,6vw,42px);
+  font-weight:1000;
+  letter-spacing:2px;
+  text-shadow:2px 2px #a00055,4px 4px #4a0028,0 0 12px white;
+}
 
-    .site-subtitle {
-      margin: 8px 0 0;
-      color: white;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 3px;
-    }
+.site-subtitle {
+  margin:8px 0 0;
+  color:white;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+}
 
-    .hibiscus {
-      display: inline-block;
-      margin: 0 4px;
-      font-size: 23px;
-      vertical-align: middle;
-      filter: drop-shadow(0 0 5px white);
-    }
+.hibiscus {
+  display:inline-block;
+  margin:0 4px;
+  font-size:23px;
+  vertical-align:middle;
+  filter:drop-shadow(0 0 5px white);
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 14px 8px;
-      background: #260817;
-      border-bottom: 2px dashed var(--pink);
-    }
+nav {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:14px 8px;
+  background:#260817;
+  border-bottom:2px dashed var(--pink);
+}
 
-    nav a {
-      display: inline-block;
-      padding: 5px 16px;
-      color: white;
-      background: linear-gradient(135deg, #ff69b4, #ff1493);
-      border: 2px solid white;
-      box-shadow: 3px 3px 0 #7a003e;
-      font-size: 12px;
-      font-weight: 1000;
-      text-shadow: 1px 1px #a00055;
-      transition: transform 0.2s;
-    }
+nav a {
+  display:inline-block;
+  padding:5px 16px;
+  color:white;
+  background:linear-gradient(135deg,#ff69b4,#ff1493);
+  border:2px solid white;
+  box-shadow:3px 3px 0 #7a003e;
+  font-size:12px;
+  font-weight:1000;
+  text-shadow:1px 1px #a00055;
+}
 
-    nav a:hover {
-      transform: translateY(-3px) rotate(-2deg);
-    }
+nav a:hover {
+  transform:translateY(-3px) rotate(-2deg);
+}
 
-    .hero {
-      padding: 30px 12px 27px;
-      text-align: center;
-      background: radial-gradient(ellipse at center, #ff149932, transparent 70%);
-    }
+.hero {
+  padding:30px 12px 27px;
+  text-align:center;
+  background:radial-gradient(ellipse at center,#ff149932,transparent 70%);
+}
 
-    .hero-deco {
-      margin: 0 0 8px;
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+.hero-deco {
+  margin:0 0 8px;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+}
 
-    .hero h2 {
-      margin: 0 0 14px;
-      color: #ff9ed2;
-      font-size: clamp(21px, 4.7vw, 34px);
-      font-weight: 1000;
-      text-shadow: 2px 2px 0 #8c0046, 0 0 10px #ff149988;
-    }
+.hero h2 {
+  margin:0 0 14px;
+  color:#ff9ed2;
+  font-size:clamp(21px,4.7vw,34px);
+  font-weight:1000;
+  text-shadow:2px 2px #8c0046,0 0 10px #ff149988;
+}
 
-    .love-badge {
-      display: inline-block;
-      padding: 5px 16px;
-      color: white;
-      background: var(--hot);
-      border: 2px solid white;
-      outline: 2px dashed var(--pink);
-      outline-offset: 3px;
-      font-size: 10px;
-      font-weight: 1000;
-      letter-spacing: 2px;
-    }
+.love-badge {
+  display:inline-block;
+  padding:5px 16px;
+  color:white;
+  background:var(--hot);
+  border:2px solid white;
+  outline:2px dashed var(--pink);
+  outline-offset:3px;
+  font-size:10px;
+  font-weight:1000;
+  letter-spacing:2px;
+}
 
-    .hero-bottom {
-      margin: 17px 0 0;
-      color: white;
-      font-size: 12px;
-      font-weight: 900;
-      text-shadow: 1px 1px #a00055;
-    }
+.hero-bottom {
+  margin:17px 0 0;
+  color:white;
+  font-size:12px;
+  font-weight:900;
+  text-shadow:1px 1px #a00055;
+}
 
-    /* うちよそバナー：右から左 */
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 10px 0;
-      color: white;
-      background: linear-gradient(90deg, #d90079, #ff1493, #d90079);
-      border-top: 2px dashed white;
-      border-bottom: 2px dashed white;
-      font-size: 13px;
-      font-weight: 1000;
-      text-shadow: 1px 1px #a00055;
-    }
+/* うちよそバナー：右から左 */
+.marquee {
+  overflow:hidden;
+  white-space:nowrap;
+  padding:10px 0;
+  color:white;
+  background:linear-gradient(90deg,#d90079,#ff1493,#d90079);
+  border-top:2px dashed white;
+  border-bottom:2px dashed white;
+  font-size:13px;
+  font-weight:1000;
+  text-shadow:1px 1px #a00055;
+}
 
-    .marquee span {
-      display: inline-block;
-      white-space: nowrap;
-      animation: gyaru-scroll 16s linear infinite;
-    }
+.marquee span {
+  display:inline-block;
+  white-space:nowrap;
+  animation:gyaru-scroll 16s linear infinite;
+}
 
-    @keyframes gyaru-scroll {
-      from { transform: translateX(100vw); }
-      to { transform: translateX(-100%); }
-    }
+@keyframes gyaru-scroll {
+  from { transform:translateX(100vw); }
+  to { transform:translateX(-100%); }
+}
 
-    .section-heading {
-      padding: 17px 8px 13px;
-      text-align: center;
-      background: #260817;
-      border-bottom: 2px dashed var(--pink);
-    }
+.section-heading {
+  padding:17px 8px 13px;
+  text-align:center;
+  background:#260817;
+  border-bottom:2px dashed var(--pink);
+}
 
-    .section-heading h2 {
-      margin: 0;
-      color: white;
-      font-size: clamp(21px, 4vw, 29px);
-      font-weight: 1000;
-      text-shadow: 2px 2px 0 #a00055, 0 0 8px #ff149977;
-    }
+.section-heading h2 {
+  margin:0;
+  color:white;
+  font-size:clamp(21px,4vw,29px);
+  font-weight:1000;
+  text-shadow:2px 2px #a00055,0 0 8px #ff149977;
+}
 
-    .section-heading p {
-      margin: 4px 0 0;
-      color: var(--pale);
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+.section-heading p {
+  margin:4px 0 0;
+  color:var(--pale);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+}
 
-    .character-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 17px;
-      padding: 22px;
-    }
+/* キャラクター一覧 */
+.character-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:17px;
+  padding:22px;
+}
 
-    .character-card {
-      min-width: 0;
-      overflow: hidden;
-      background: #260817;
-      border: 3px solid var(--pink);
-      outline: 1px dashed white;
-      outline-offset: -6px;
-      box-shadow: 4px 4px 0 #850047, 0 0 12px #ff149922;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+.character-card {
+  min-width:0;
+  overflow:hidden;
+  background:#260817;
+  border:3px solid var(--pink);
+  outline:1px dashed white;
+  outline-offset:-6px;
+  box-shadow:4px 4px 0 #850047,0 0 12px #ff149922;
+  transition:transform .2s,box-shadow .2s;
+}
 
-    .character-card:hover {
-      transform: translateY(-5px) rotate(-1deg);
-      box-shadow: 6px 7px 0 #ff149966, 0 0 18px #ff149955;
-    }
+.character-card:hover {
+  transform:translateY(-5px) rotate(-1deg);
+  box-shadow:6px 7px 0 #ff149966,0 0 18px #ff149955;
+}
 
-    .character-card a {
-      display: block;
-    }
+.character-card a { display:block; }
 
-    .character-image {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      color: white;
-      background-color: #3a1026;
-      background-image:
-        radial-gradient(ellipse at 25% 35%, #ff69b4 0 5px, transparent 6px),
-        radial-gradient(ellipse at 75% 70%, #ff1493 0 6px, transparent 7px),
-        radial-gradient(ellipse at 55% 15%, #a00055 0 3px, transparent 4px);
-      background-size: 38px 33px, 45px 39px, 32px 30px;
-      border-bottom: 3px dashed var(--pink);
-      font-size: 40px;
-      text-shadow: 0 0 10px white;
-    }
+.character-image {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  aspect-ratio:3 / 4;
+  overflow:hidden;
+  color:white;
+  background-color:#3a1026;
+  background-image:
+    radial-gradient(ellipse at 25% 35%,#ff69b4 0 5px,transparent 6px),
+    radial-gradient(ellipse at 75% 70%,#ff1493 0 6px,transparent 7px),
+    radial-gradient(ellipse at 55% 15%,#a00055 0 3px,transparent 4px);
+  background-size:38px 33px,45px 39px,32px 30px;
+  border-bottom:3px dashed var(--pink);
+  font-size:40px;
+  text-shadow:0 0 10px white;
+}
 
-    .character-image::after {
-      content: "✧･ﾟ: *✧･ﾟ:*";
-      position: absolute;
-      right: 5px;
-      bottom: 4px;
-      color: white;
-      font-size: 10px;
-      text-shadow: 0 0 5px #ff1493;
-      pointer-events: none;
-    }
+.character-image::after {
+  content:"✧･ﾟ: *✧･ﾟ:*";
+  position:absolute;
+  right:5px;
+  bottom:4px;
+  color:white;
+  font-size:10px;
+  text-shadow:0 0 5px #ff1493;
+  pointer-events:none;
+}
 
-    .character-image img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.character-image img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    .character-info {
-      padding: 11px 9px 12px;
-      text-align: center;
-    }
+.character-info {
+  padding:11px 9px 12px;
+  text-align:center;
+}
 
-    .character-number {
-      display: inline-block;
-      margin-bottom: 6px;
-      padding: 1px 9px;
-      color: white;
-      background: var(--hot);
-      border: 1px solid white;
-      font-size: 9px;
-      font-weight: 1000;
-    }
+.character-number {
+  display:inline-block;
+  margin-bottom:6px;
+  padding:1px 9px;
+  color:white;
+  background:var(--hot);
+  border:1px solid white;
+  font-size:9px;
+  font-weight:1000;
+}
 
-    .character-name {
-      margin: 0;
-      color: #ff9ed2;
-      font-size: clamp(13px, 2.5vw, 20px);
-      font-weight: 1000;
-      text-shadow: 1px 1px #a00055;
-      overflow-wrap: anywhere;
-    }
+.character-name {
+  margin:0;
+  color:#ff9ed2;
+  font-size:clamp(13px,2.5vw,20px);
+  font-weight:1000;
+  text-shadow:1px 1px #a00055;
+  overflow-wrap:anywhere;
+}
 
-    .character-description {
-      margin: 6px 0 10px;
-      color: #f8c9e3;
-      font-size: 11px;
-      overflow-wrap: anywhere;
-    }
+.character-description {
+  margin:6px 0 10px;
+  color:#f8c9e3;
+  font-size:11px;
+  overflow-wrap:anywhere;
+}
 
-    .profile-link {
-      display: block;
-      padding: 5px 3px;
-      color: white;
-      background: linear-gradient(90deg, #d90079, #ff1493, #d90079);
-      border: 1px solid white;
-      font-size: 11px;
-      font-weight: 1000;
-      text-shadow: 1px 1px #a00055;
-    }
+.profile-link {
+  display:block;
+  padding:5px 3px;
+  color:white;
+  background:linear-gradient(90deg,#d90079,#ff1493,#d90079);
+  border:1px solid white;
+  font-size:11px;
+  font-weight:1000;
+  text-shadow:1px 1px #a00055;
+}
 
-    .profile-link:hover {
-      color: var(--hot);
-      background: white;
-      text-shadow: none;
-    }
+.profile-link:hover {
+  color:var(--hot);
+  background:white;
+  text-shadow:none;
+}
 
-    .bottom-deco {
-      padding: 18px 8px;
-      color: #ff9ed2;
-      text-align: center;
-      background: #260817;
-      border-top: 2px dashed var(--pink);
-      font-size: 12px;
-      font-weight: 1000;
-      letter-spacing: 1px;
-      text-shadow: 0 0 7px #ff149977;
-    }
+.bottom-deco {
+  padding:18px 8px;
+  color:#ff9ed2;
+  text-align:center;
+  background:#260817;
+  border-top:2px dashed var(--pink);
+  font-size:12px;
+  font-weight:1000;
+  letter-spacing:1px;
+  text-shadow:0 0 7px #ff149977;
+}
 
-    .bottom-deco .small {
-      display: block;
-      margin-top: 5px;
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
+.bottom-deco .small {
+  display:block;
+  margin-top:5px;
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+}
 
-    footer {
-      padding: 13px 8px;
-      color: white;
-      text-align: center;
-      background: linear-gradient(135deg, #ff1493, #d90079);
-      border-top: 3px double white;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
+footer {
+  padding:13px 8px;
+  color:white;
+  text-align:center;
+  background:linear-gradient(135deg,#ff1493,#d90079);
+  border-top:3px double white;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+}
 
-    @media (max-width: 650px) {
-      .page-frame {
-        width: calc(100% - 14px);
-        margin: 10px auto;
-      }
+@media (max-width:650px) {
+  .page-frame {
+    width:calc(100% - 14px);
+    margin:10px auto;
+  }
 
-      .character-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        padding: 14px;
-      }
+  .character-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+    padding:14px;
+  }
 
-      .hero {
-        padding: 25px 8px;
-      }
+  .hero { padding:25px 8px; }
 
-      .character-info {
-        padding: 9px 7px 10px;
-      }
-    }
+  .character-info { padding:9px 7px 10px; }
+}
 
-    @media (max-width: 360px) {
-      .character-grid {
-        gap: 8px;
-        padding: 10px;
-      }
+@media (max-width:360px) {
+  .character-grid {
+    gap:8px;
+    padding:10px;
+  }
 
-      nav {
-        gap: 7px;
-      }
+  nav { gap:7px; }
+  nav a { padding:5px 11px; }
+}
 
-      nav a {
-        padding: 5px 11px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .marquee span {
-        animation: none;
-      }
-    }
-  </style>
+@media (prefers-reduced-motion:reduce) {
+  .marquee span { animation:none; }
+}
+</style>
 </head>
 
 <body>
-  <div class="page-frame">
+<div class="page-frame">
 
-    <div class="leopard-band"></div>
+  <div class="leopard-band"></div>
 
-    <header>
-      <p class="header-deco">
-        ✧･ﾟ: *✧･ﾟ:* ♡ LOVE MY BABIES ♡ *:･ﾟ✧*:･ﾟ✧
-      </p>
+  <header>
+    <p class="header-deco">
+      ✧･ﾟ: *✧･ﾟ:* ♡ LOVE MY BABIES ♡ *:･ﾟ✧*:･ﾟ✧
+    </p>
 
-      <h1 class="site-title">☆★ ﾏｨOC図鑑 ★☆</h1>
+    <h1 class="site-title">☆★ ﾏｨOC図鑑 ★☆</h1>
 
-      <p class="site-subtitle">
-        <span class="hibiscus">🌺</span>
-        MY ORIGINAL CHARACTERS
-        <span class="hibiscus">🌺</span>
-      </p>
-    </header>
+    <p class="site-subtitle">
+      <span class="hibiscus">🌺</span>
+      MY ORIGINAL CHARACTERS
+      <span class="hibiscus">🌺</span>
+    </p>
+  </header>
 
-    <nav>
-      <a href="index.html">♡ TOP ♡</a>
-      <a href="characters.html">♡ きゃら一覧 ♡</a>
-    </nav>
+  <nav>
+    <a href="index.html">♡ TOP ♡</a>
+    <a href="characters.html">♡ きゃら一覧 ♡</a>
+  </nav>
 
-    <section class="hero">
-      <p class="hero-deco">｡ﾟﾟ･｡･ﾟﾟ｡ ♡ ｡ﾟﾟ･｡･ﾟﾟ｡</p>
+  <section class="hero">
+    <p class="hero-deco">｡ﾟﾟ･｡･ﾟﾟ｡ ♡ ｡ﾟﾟ･｡･ﾟﾟ｡</p>
+    <h2>ょぅこそｯ!! ｩﾁのOC図鑑へ♡</h2>
+    <span class="love-badge">♡ LOVE MY BABIES ♡</span>
+    <p class="hero-bottom">
+      ✧ ｩﾁのかゎぃぃ子たちを見てｯてねｯ ✧
+    </p>
+  </section>
 
-      <h2>ょぅこそｯ!! ｩﾁのOC図鑑へ♡</h2>
-
-      <span class="love-badge">♡ LOVE MY BABIES ♡</span>
-
-      <p class="hero-bottom">
-        ✧ ｩﾁのかゎぃぃ子たちを見てｯてねｯ ✧
-      </p>
-    </section>
-
-    <div class="marquee">
-      <span>☆ ぅちょそ大歓迎ｯｯ♡ ぅちょそまｯてるょ〜!! ☆</span>
-    </div>
-
-    <div class="section-heading">
-      <h2>♡ きゃらくたぁ一覧ｯ!! ♡</h2>
-      <p>｡･:*:･ﾟ★ SPECIAL COLLECTION ★ﾟ･:*:･｡</p>
-    </div>
-
-    <main>
-      <div class="character-grid" id="character-grid"></div>
-    </main>
-
-    <div class="leopard-band"></div>
-
-    <div class="bottom-deco">
-      🌺 ☆ﾟ.*･｡ﾟ ♡ LOVE & PEACE ♡ ﾟ｡･*.ﾟ☆ 🌺
-      <span class="small">♡ ﾐﾝﾅの推Ｕが見つかりますょぅにｯ ♡</span>
-    </div>
-
-    <footer>
-      © ﾏｨOC図鑑 ☆ ALL CHARACTERS ARE MINE ♡
-    </footer>
-
+  <div class="marquee">
+    <span>☆ ぅちょそ大歓迎ｯｯ♡ ぅちょそまｯてるょ〜!! ☆</span>
   </div>
 
-  <script>
-    const characters = [
-      {
-        id: "001",
-        name: "CHARACTER 001",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/画像 44.jpg"
-      },
-      {
-        id: "002",
-        name: "CHARACTER 002",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/madara.jpg"
-      },
-      {
-        id: "003",
-        name: "CHARACTER 003",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/gen.jpg"
-      },
-      {
-        id: "004",
-        name: "CHARACTER 004",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/mitei.jpg"
-      },
-      {
-        id: "005",
-        name: "CHARACTER 005",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/kuranosuke.jpg"
-      },
-      {
-        id: "006",
-        name: "CHARACTER 006",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/hirara.jpg"
-      },
-      {
-        id: "007",
-        name: "CHARACTER 007",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/kou.jpg"
-      },
-      {
-        id: "008",
-        name: "CHARACTER 008",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/ibuki.jpg"
-      },
-      {
-        id: "009",
-        name: "CHARACTER 009",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/pgya.jpg"
-      },
-      {
-        id: "010",
-        name: "CHARACTER 010",
-        description: "♡ ｺｺに紹介文 ♡",
-        image: "images/tun.jpg"
-      }
-    ];
+  <div class="section-heading">
+    <h2>♡ きゃらくたぁ一覧ｯ!! ♡</h2>
+    <p>｡･:*:･ﾟ★ SPECIAL COLLECTION ★ﾟ･:*:･｡</p>
+  </div>
 
-    const grid = document.getElementById("character-grid");
+  <main>
+    <div class="character-grid" id="character-grid"></div>
+  </main>
 
-    function makeText(tag, className, content) {
-      const element = document.createElement(tag);
-      element.className = className;
-      element.textContent = content;
-      return element;
-    }
+  <div class="leopard-band"></div>
 
-    characters.forEach((character) => {
-      const card = document.createElement("article");
-      card.className = "character-card";
+  <div class="bottom-deco">
+    🌺 ☆ﾟ.*･｡ﾟ ♡ LOVE & PEACE ♡ ﾟ｡･*.ﾟ☆ 🌺
+    <span class="small">♡ ﾐﾝﾅの推Ｕが見つかりますょぅにｯ ♡</span>
+  </div>
 
-      const link = document.createElement("a");
-      link.href = "profile.html?id=" + encodeURIComponent(character.id);
-      link.setAttribute(
-        "aria-label",
-        character.name + " のプロフィールを見る"
-      );
+  <footer>
+    © ﾏｨOC図鑑 ☆ ALL CHARACTERS ARE MINE ♡
+  </footer>
 
-      const imageBox = document.createElement("div");
-      imageBox.className = "character-image";
+</div>
 
-      const img = document.createElement("img");
-      img.src = character.image;
-      img.alt = character.name;
-      img.loading = "lazy";
+<script>
+/*
+  画像は images フォルダ内に保存してね。
+  ファイル名は「画像 47.jpg」〜「画像 56.jpg」
+*/
 
-      img.onerror = () => {
-        img.remove();
-        imageBox.textContent = "♡";
-      };
+const characters = [
+  {
+    id:"001",
+    name:"CHARACTER 001",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 44.jpg"
+  },
+  {
+    id:"002",
+    name:"CHARACTER 002",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 45.jpg"
+  },
+  {
+    id:"003",
+    name:"CHARACTER 003",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 46.jpg"
+  },
+  {
+    id:"004",
+    name:"CHARACTER 004",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 47.jpg"
+  },
+  {
+    id:"005",
+    name:"CHARACTER 005",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 51.jpg"
+  },
+  {
+    id:"006",
+    name:"CHARACTER 006",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 52.jpg"
+  },
+  {
+    id:"007",
+    name:"CHARACTER 007",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 54.jpg"
+  },
+  {
+    id:"008",
+    name:"CHARACTER 008",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 55.jpg"
+  },
+  {
+    id:"009",
+    name:"CHARACTER 009",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 60.jpg"
+  },
+  {
+    id:"010",
+    name:"CHARACTER 010",
+    description:"♡ ｺｺに紹介文 ♡",
+    image:"images/画像 62.jpg"
+  }
+];
 
-      imageBox.appendChild(img);
+const grid = document.getElementById("character-grid");
 
-      const info = document.createElement("div");
-      info.className = "character-info";
+function makeText(tag,className,content) {
+  const element = document.createElement(tag);
+  element.className = className;
+  element.textContent = content;
+  return element;
+}
 
-      info.appendChild(
-        makeText("span", "character-number", "No. " + character.id)
-      );
+characters.forEach((character) => {
+  const card = document.createElement("article");
+  card.className = "character-card";
 
-      info.appendChild(
-        makeText("h3", "character-name", character.name)
-      );
+  const link = document.createElement("a");
+  link.href = "profile.html?id=" + encodeURIComponent(character.id);
+  link.setAttribute("aria-label",character.name + " のプロフィールを見る");
 
-      info.appendChild(
-        makeText("p", "character-description", character.description)
-      );
+  const imageBox = document.createElement("div");
+  imageBox.className = "character-image";
 
-      info.appendChild(
-        makeText("span", "profile-link", "♡ PROFILE ♡")
-      );
+  const img = document.createElement("img");
+  img.src = character.image;
+  img.alt = character.name;
+  img.loading = "lazy";
 
-      link.appendChild(imageBox);
-      link.appendChild(info);
-      card.appendChild(link);
-      grid.appendChild(card);
-    });
-  </script>
+  img.onerror = () => {
+    img.remove();
+    imageBox.textContent = "♡";
+  };
+
+  imageBox.appendChild(img);
+
+  const info = document.createElement("div");
+  info.className = "character-info";
+
+  info.appendChild(makeText("span","character-number","No. " + character.id));
+  info.appendChild(makeText("h3","character-name",character.name));
+  info.appendChild(makeText("p","character-description",character.description));
+  info.appendChild(makeText("span","profile-link","♡ PROFILE ♡"));
+
+  link.appendChild(imageBox);
+  link.appendChild(info);
+  card.appendChild(link);
+  grid.appendChild(card);
+});
+</script>
+
 </body>
 </html>
